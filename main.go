@@ -19,13 +19,13 @@ func main() {
 }
 func sendEmain(info string, demo string) {
 	e := email.NewEmail()
-	e.From = "Carpe-Wang<1592622761@qq.com>"
-	e.To = []string{"1592622761@qq.com"}
+	e.From = "582044998@qq.com<582044998@qq.com>"
+	e.To = []string{"582044998@qq.com"}
 	e.Subject = "每日天气"
 	//e.HTML = []byte(info)
 	b := []byte(info + demo)
 	e.HTML = []byte(b)
-	err := e.Send("smtp.qq.com:587", smtp.PlainAuth("", "1592622761@qq.com", "//注意不是密码", "smtp.qq.com"))
+	err := e.Send("smtp.qq.com:587", smtp.PlainAuth("", "582044998@qq.com", "//注意不是密码", "smtp.qq.com"))
 	if err != nil {
 		return
 	}
